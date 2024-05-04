@@ -4,14 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whac a Mole</title>
-    <link rel="stylesheet" href="./whacamole.css" />
-    <script src="whacamole.js"></script>
+    <link rel="stylesheet" href="whacamole.css" />
   </head>
   <body>
     <h1>Whac a Mole</h1>
     <h2 id="score">0</h2>
     <button id="start-button" class="start-button">Start</button>
-    <button id="restart-button" class="restart-button" style="display: none;">Restart</button>
+    <button id="restart-button" class="restart-button" style="display: none">
+      Restart
+    </button>
     <div id="board"></div>
+    <div id="game-over-popup" class="game-over-popup" style="display: none">
+      <h2>Game Over</h2>
+      <h2 id="game-over-score">0</h2>
+      <button id="game-over-restart" class="game-over-restart">
+        Play Again
+      </button>
+    </div>
+    <script src="whacamole.js"></script>
   </body>
 </html>

@@ -3,6 +3,8 @@ let currPlantTile;
 let score = 0;
 let gameOver = false;
 let gameStarted = false;
+let gameMusic = new Audio("./music.mp3");
+let gameOverMusic = new Audio("./game-over.wav");
 
 window.onload = function () {
   setGame();
@@ -19,6 +21,9 @@ function setGame() {
   document
     .getElementById("restart-button")
     .addEventListener("click", restartGame);
+  document
+    .getElementById("game-over-restart")
+    .addEventListener("click", restartGame);
 }
 
 function getRandomTile() {
@@ -33,6 +38,7 @@ function startGame() {
   setMole();
   setInterval(setMole, 800);
   setInterval(setPlant, 1000);
+  gameMusic.play();
 }
 
 function restartGame() {
@@ -44,6 +50,9 @@ function restartGame() {
   currMoleTile = null;
   currPlantTile = null;
   gameOver = false;
+  document.getElementById("game-over-popup").style.display = "none";
+  gameMusic.pause();
+  gameOverMusic.pause();
 }
 
 function setMole() {
@@ -97,5 +106,8 @@ function selectTile() {
     document.getElementById("score").innerText =
       "GAME OVER: " + score.toString();
     gameOver = true;
+    document.getElementById("game-over-popup").style.display = "block";
+    document.getElementById("game-over-score").innerText = score.toString();
+    gameOverMusic.play();
   }
 }
