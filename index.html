@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,12 +7,28 @@
     <link rel="stylesheet" href="whacamole.css" />
   </head>
   <body>
-    <h1>Whac a Mole</h1>
-    <h2 id="score">0</h2>
+    <div id="game">
+     
+    <div id="instructions">
+      <div class="heading">
+        <h2>Instructions</h2>
+      </div>
+      <div class="gamecontent">
+      <ul>
+      <li>The objective of the game is to hit the mole as it pops out of its hole using the large mallet provided. Each time you hit the mole, you earn points.</li>
+      <li>The game starts with the mole hidden in its hole. When the game begins, the mole will randomly pop out of its hole</li>
+      <li>Each time you hit the mole, you earn points.</li>
+      <li>The game ends when you have hit the mole a set number of times.The player with the most points at the end of the game wins.</li>
+    </ul>
+  </div>
+    </div>
+    <div id="gamestart">
+      <h1>Whac a Mole</h1>
+    <h2 id="score">score:0</h2>
     <button id="start-button" class="start-button">Start</button>
     <button id="restart-button" class="restart-button" style="display: none">
       Restart
-    </button>
+     </button> 
     <div id="board"></div>
     <div id="game-over-popup" class="game-over-popup" style="display: none">
       <h2>Game Over</h2>
@@ -20,7 +36,26 @@
       <button id="game-over-restart" class="game-over-restart">
         Play Again
       </button>
+  
     </div>
+  </div>
+  </div>
     <script src="whacamole.js"></script>
   </body>
-</html>
+</html> 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 

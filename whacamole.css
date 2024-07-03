@@ -1,11 +1,43 @@
-body {
+ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background: url("./assets/mario-bg.jpg");
   background-size: cover;
 }
 
-/* Button styles */
+#game{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap:65px;
+}
+
+#instructions {
+  height:700px;
+  width:500px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.heading{
+
+margin-top:170px;
+
+
+}
+#gamestart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gamecontent{
+  line-height: 2rem;
+}
+
 .start-button,
 .restart-button,
 .game-over-restart {
@@ -25,7 +57,7 @@ body {
   background-color: #3e8e41;
 }
 
-/* Board styles */
+
 #board {
   width: 540px;
   height: 540px;
@@ -55,7 +87,7 @@ body {
   -ms-user-select: none;
 }
 
-/* Game over popup styles */
+
 .game-over-popup {
   position: absolute;
   top: 50%;
@@ -80,3 +112,291 @@ body {
 .game-over-restart:hover {
   background-color: #3e8e41;
 }
+
+ @media (min-width: 576px) {
+  #board {
+    width: 400px;
+    height: 400px;
+  }
+
+  #board div {
+    width: 133px;
+    height: 133px;
+  }
+
+  #board div img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #instructions {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #game {
+    gap: 50px;
+  }
+
+  #board {
+    width: 500px;
+    height: 500px;
+  }
+
+  #board div {
+    width: 166px;
+    height: 166px;
+  }
+
+  #board div img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 992px) {
+  #game {
+    gap: 65px;
+  }
+
+  #board {
+    width: 540px;
+    height: 540px;
+  }
+
+  #board div {
+    width: 180px;
+    height: 180px;
+  }
+
+  #board div img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #instructions {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+.heading h2 {
+  margin-bottom: 20px; 
+}
+
+.gamecontent ul {
+  margin-top: 20px; 
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .heading h2 {
+    margin-bottom: 20px; 
+  }
+
+  .gamecontent ul {
+    margin-top: 10px; 
+  }
+}
+
+
+
+
+
+ 
+
+
+
+ @media (max-width: 768px) {
+  #game {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #instructions {
+    height: auto;
+    width: 90%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .heading {
+    margin-top: 20px;
+  }
+
+  #board {
+    width: 300px;
+    height: 300px;
+  }
+
+  #board div {
+    width: 100px;
+    height: 100px;
+  }
+
+  #board div img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .start-button,
+  .restart-button,
+  .game-over-restart {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .game-over-popup {
+    width: 90%;
+    padding: 10px;
+  }
+} 
+
+
+
+
+
+
+.gamecontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+  /* border: 2px solid #000; */
+  border-radius: 10px;
+  /* background-color: #f9f9f9; */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  h1 {
+      text-align: center;
+  }
+}
+
+
+
+#instructions {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.gamecontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+
+  border-radius: 10px;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+.heading {
+  margin-bottom: 10px; /* Adjusted margin to decrease gap */
+}
+/* Mobile Styles */
+@media (max-width: 600px) {
+  h1 {
+      margin-bottom: 10px;
+  }
+  
+  .heading {
+      margin-top: 0;
+      margin-bottom: 10px;
+  }
+}
+
+/* Laptop Styles */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  h1 {
+      text-align: center;
+  }
+}
+
+
+
+
+
+/* Mobile Styles for specific screen widths */
+@media (max-width: 320px) {
+  .heading {
+    margin-top: -13px;
+    margin-bottom: -23px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  .heading {
+    margin-top: -13px;
+    margin-bottom: -23px;
+    
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .heading {
+    margin-top: -13px;
+    margin-bottom: -23px;
+       /* Decrease gap further for 425px width */
+  }
+}
+
+
+
+
+
+
+
+
+
+
